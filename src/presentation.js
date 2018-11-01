@@ -214,7 +214,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Functional" target="_blank">
+        <Link
+          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Functional"
+          target="_blank"
+        >
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -251,7 +254,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Props%2FButton" target="_blank">
+        <Link
+          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Props%2FButton"
+          target="_blank"
+        >
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -274,7 +280,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link
+          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
+          target="_blank"
+        >
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -350,7 +359,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link
+          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
+          target="_blank"
+        >
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -433,7 +445,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
+        <Link href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -477,7 +489,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
+        <Link href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -495,7 +507,7 @@ export default function Presentation() {
                   <ListItem>
                     React&apos;s simplicity makes&nbsp;
                     <Link
-                      href="https://github.com/travi/react-in-isolation/tree/master/test/unit"
+                      href="https://github.com/travi/react-in-isolation/tree/dsmjs-oct-2017/test/unit"
                       target="_blank"
                       textColor="#888"
                     >
@@ -521,7 +533,7 @@ export default function Presentation() {
                 <Appear>
                   <ListItem>
                     <Link
-                      href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
+                      href="https://github.com/storybooks/storybook/tree/dsmjs-oct-2017/addons/knobs"
                       target="_blank"
                       textColor="#888"
                     >
