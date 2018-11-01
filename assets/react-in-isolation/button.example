@@ -1,0 +1,21 @@
+import React from 'react';
+
+export default function Button({
+  label,
+  disabled,
+  onClick
+}) {
+  return (
+    <button
+      disabled={disabled}
+      style={{
+        cursor: disabled ?
+          'not-allowed' :
+          'pointer'
+      }}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+}

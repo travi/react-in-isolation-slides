@@ -1,0 +1,10 @@
+import React from 'react';
+import {storiesOf} from '@storybook/react';
+import CreateElement from './create-element';
+import Div from './div';
+import String from './string';
+
+storiesOf('Functional', module)
+  .add('JavaScript', () => <CreateElement />)
+  .add('Div', () => <Div />)
+  .add('String', () => <String />);
