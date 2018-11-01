@@ -2,12 +2,9 @@ language: node_js
 notifications:
   email: false
 
-stages:
-  - test
-  - deploy
-
 jobs:
   include:
+  - stage: test
   - stage: deploy
     node_js: 10
     script: skip
