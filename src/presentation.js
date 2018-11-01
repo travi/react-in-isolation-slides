@@ -610,9 +610,9 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://presentations.travi.org/react-in-isolation-dsmjs-oct-2017"
+                  href="https://dsmjs-oct-2017--react-in-isolation.netlify.com/"
                 >
-                  presentations.travi.org/react-in-isolation-dsmjs-oct-2017
+                  dsmjs-oct-2017--react-in-isolation.netlify.com
                 </Link>
               </ListItem>
             </List>
