@@ -38,7 +38,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Not an intro to React</Heading>
+        <Heading size={1} fit>Less of an intro to React</Heading>
         <Heading size={2} fit>Instead, how to learn React</Heading>
       </Slide>
 
@@ -52,30 +52,12 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
-      <Slide>
+      <Slide notes="Transpilation, Bundling for the Browser, Auto rebuild when developing, Hot-reload">
         <Heading size={2} fit>Build Tools</Heading>
-
-        <List>
-          <ListItem>Transpilation (Babel)</ListItem>
-          <ListItem>
-            Bundling for the browser (Webpack)
-            <List>
-              <ListItem>Dev Server</ListItem>
-              <ListItem>Hot Reload</ListItem>
-            </List>
-          </ListItem>
-        </List>
       </Slide>
 
-      <Slide>
+      <Slide notes="Loading data to the browser, State management, Routing, SSR">
         <Heading size={2} fit>Application Wiring</Heading>
-
-        <List>
-          <ListItem>Loading data into the browser (Redial, etc)</ListItem>
-          <ListItem>State management (Redux, MobX, etc)</ListItem>
-          <ListItem>Routing (React Router)</ListItem>
-          <ListItem>Server-side Render?</ListItem>
-        </List>
       </Slide>
 
       <Slide transition={['zoom']}>
@@ -123,13 +105,62 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <Slide>
+        <Layout>
+          <Fill>
+            <Image width="70%" src={require('../assets/react-in-isolation/airbnb.svg')} />
+            <Appear>
+              <Link href="https://mochajs.org/" target="_blank">
+                <Image width="70%" src={require('../assets/react-in-isolation/mocha.svg')} />
+              </Link>
+            </Appear>
+          </Fill>
+          <Fill>
+            <Link href="http://airbnb.io/enzyme/" target="_blank">
+              <Image width="70%" src={images.enzyme.replace('/', '')} />
+            </Link>
+            <Appear>
+              <Link href="http://chaijs.com/" target="_blank">
+                <Image width="60%" src={require('../assets/react-in-isolation/chai.svg')} />
+              </Link>
+            </Appear>
+          </Fill>
+        </Layout>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/hello-world-test.example')}
+        ranges={[
+          {
+            loc: [1, 2],
+            title: 'Unit Testing with Enzyme',
+            note: 'enzyme simplifies testing components'
+          },
+          {
+            loc: [7, 10],
+            title: 'Unit Testing with Enzyme',
+            note: 'render the component with shallow()'
+          },
+          {
+            loc: [11, 15],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify the behavior'
+          }
+        ]}
+      />
+
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>But what do I do with these components</Heading>
         <Heading size={2} fit>without an application?</Heading>
       </Slide>
 
       <Slide transition={['zoom']}>
         <Link href="https://storybook.js.org/" target="_blank">
-          <Image width={'80%'} src={require('../assets/react-in-isolation/storybook.svg')} />
+          <Image width="80%" src={require('../assets/react-in-isolation/storybook.svg')} />
         </Link>
       </Slide>
 
@@ -214,10 +245,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link
-          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Functional"
-          target="_blank"
-        >
+        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Functional" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -255,7 +283,7 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Props%2FButton"
+          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Props%2FButton"
           target="_blank"
         >
           <Heading size={2}>Demo</Heading>
@@ -281,7 +309,7 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
+          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
           target="_blank"
         >
           <Heading size={2}>Demo</Heading>
@@ -346,21 +374,67 @@ export default function Presentation() {
         code={require('../assets/react-in-isolation/handlers.example')}
         ranges={[
           {
-            loc: [15, 21],
+            loc: [22, 28],
             note: 'functions passed as props',
             title: 'Handlers'
           },
           {
-            loc: [18, 19],
+            loc: [25, 26],
             note: 'functions passed as props',
             title: 'Handlers'
           }
         ]}
       />
 
+      <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/button-test.example')}
+        ranges={[
+          {
+            loc: [13, 20],
+            title: 'Unit Testing with Enzyme',
+            note: 'pass props to the button'
+          },
+          {
+            loc: [20, 21],
+            title: 'Unit Testing with Enzyme',
+            note: 'select the DOM <button/> within the wrapper'
+          },
+          {
+            loc: [21, 31],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the props were passed down to the <button/>'
+          },
+          {
+            loc: [42, 46],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the pointer is used as the cursor when the button is enabled'
+          },
+          {
+            loc: [34, 40],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (especially when false) helps clarify the intent of the test'
+          },
+          {
+            loc: [57, 61],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that not-allowed is used as the cursor when the button is enabled'
+          },
+          {
+            loc: [49, 55],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (even when true) helps clarify the intent of the test'
+          }
+        ]}
+      />
+
       <Slide>
         <Link
-          href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
+          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
           target="_blank"
         >
           <Heading size={2}>Demo</Heading>
@@ -409,6 +483,18 @@ export default function Presentation() {
         </List>
       </Slide>
 
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/simple-container.example')}
+        ranges={[
+          {
+            loc: [1, 8],
+            title: 'Container Component',
+            note: 'maintains an instance'
+          }
+        ]}
+      />
+
       <Slide transition={['zoom']}>
         <Heading size={1} fit>State</Heading>
 
@@ -445,7 +531,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
+        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -460,13 +546,13 @@ export default function Presentation() {
             note: 'an instance needs to be created to maintain state'
           },
           {
-            loc: [11, 20],
+            loc: [12, 21],
             title: 'Container Component',
             note: 'the `render` function serves the same purpose as a functional component, but has privileged ' +
             'access to instance properties'
           },
           {
-            loc: [15, 16],
+            loc: [16, 17],
             title: 'Container Component',
             note: 'the `value` is controlled using state'
           },
@@ -476,20 +562,194 @@ export default function Presentation() {
             note: 'state of `value` is initialized to an empty string. this could be initialized to a prop value'
           },
           {
-            loc: [5, 10],
+            loc: [5, 11],
             title: 'Container Component',
             note: 'the handler passed as `onChange` to the DOM element updates the internal component state'
           },
           {
-            loc: [16, 17],
+            loc: [17, 18],
             title: 'Container Component',
             note: 'the change-handler is passed to `onChange`'
           }
         ]}
       />
 
+      <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/input-test.example')}
+        ranges={[
+          {
+            loc: [9, 10],
+            title: 'Unit Testing with Enzyme',
+            note: 'render the <Input />'
+          },
+          {
+            loc: [10, 14],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the type is set correctly and that the value defaults to empty'
+          },
+          {
+            loc: [22, 26],
+            title: 'Unit Testing with Enzyme',
+            note: 'simulate a value change'
+          },
+          {
+            loc: [27, 31],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the state was updated and flows down to the <input />'
+          },
+          {
+            loc: [37, 40],
+            title: 'Unit Testing with Enzyme',
+            note: 'provide an external change handler'
+          },
+          {
+            loc: [41, 48],
+            title: 'Unit Testing with Enzyme',
+            note: 'simulate a value change'
+          },
+          {
+            loc: [49, 55],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (even when true) helps clarify the intent of the test'
+          }
+        ]}
+      />
+
       <Slide>
-        <Link href="https://dsmjs-oct-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
+        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
+          <Heading size={2}>Demo</Heading>
+        </Link>
+      </Slide>
+
+      <Slide transition={['zoom']}>
+        <Heading size={1} fit>Navigation</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/navigation.example')}
+        ranges={[
+          {
+            loc: [2, 3],
+            title: 'Navigation with linkTo',
+            note: 'import the linkTo function'
+          },
+          {
+            loc: [17, 27],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [19, 23],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [33, 37],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [43, 47],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [57, 61],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [20, 21],
+            title: 'Navigation with linkTo',
+            note: 'define the category that you want to navigate to'
+          },
+          {
+            loc: [13, 14],
+            title: 'Navigation with linkTo',
+            note: 'define the category that you want to navigate to'
+          },
+          {
+            loc: [21, 22],
+            title: 'Navigation with linkTo',
+            note: 'and the story name'
+          },
+          {
+            loc: [29, 30],
+            title: 'Navigation with linkTo',
+            note: 'and the story name'
+          }
+        ]}
+      />
+
+      <Slide>
+        <Link
+          // eslint-disable-next-line max-len
+          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2FlinkTo"
+          target="_blank"
+        >
+          <Heading size={2}>Demo</Heading>
+        </Link>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../assets/react-in-isolation/navigation.example')}
+        ranges={[
+          {
+            loc: [4, 5],
+            title: 'Navigation with storybook-router',
+            note: 'import the storybook-router'
+          },
+          {
+            loc: [84, 90],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [90, 98],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [98, 106],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [70, 71],
+            title: 'Navigation with storybook-router',
+            note: 'add a decorator to define routes. storybook decorators are applied to each story'
+          },
+          {
+            loc: [71, 75],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          },
+          {
+            loc: [75, 79],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          },
+          {
+            loc: [79, 83],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          }
+        ]}
+      />
+
+      <Slide>
+        <Link
+          // eslint-disable-next-line max-len
+          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2Frouter"
+          target="_blank"
+        >
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -498,27 +758,6 @@ export default function Presentation() {
         <Heading size={1} fit>Next Steps</Heading>
 
         <List>
-          <Appear>
-            <ListItem>
-              Testing
-
-              <List>
-                <Appear>
-                  <ListItem>
-                    React&apos;s simplicity makes&nbsp;
-                    <Link
-                      href="https://github.com/travi/react-in-isolation/tree/dsmjs-oct-2017/test/unit"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      unit testing
-                    </Link>
-                    &nbsp;straight forward
-                  </ListItem>
-                </Appear>
-              </List>
-            </ListItem>
-          </Appear>
           <Appear>
             <ListItem>
               <Link
@@ -530,42 +769,32 @@ export default function Presentation() {
               </Link>
 
               <List>
-                <Appear>
-                  <ListItem>
-                    <Link
-                      href="https://github.com/storybooks/storybook/tree/dsmjs-oct-2017/addons/knobs"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Knobs
-                    </Link>
-                    <Link
-                      href="https://www.youtube.com/watch?v=kopW6vzs9dg&feature=youtu.be"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Demo Video
-                    </Link>
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
-                    <Link href="https://github.com/gvaldambrini/storybook-router" target="_blank" textColor="#888">
-                      Storybook Router
-                    </Link>
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
-                    <Link
-                      href="https://github.com/mthuret/storybook-addon-specifications"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Specifications Addon
-                    </Link>
-                  </ListItem>
-                </Appear>
+                <ListItem>
+                  <Link
+                    href="https://github.com/storybooks/storybook/tree/icc-nov-2017/addons/knobs"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Knobs
+                  </Link>
+                  {' - '}
+                  <Link
+                    href="https://www.youtube.com/watch?v=kopW6vzs9dg&feature=youtu.be"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Demo Video
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    href="https://github.com/mthuret/storybook-addon-specifications"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Specifications Addon
+                  </Link>
+                </ListItem>
               </List>
             </ListItem>
           </Appear>
@@ -573,6 +802,13 @@ export default function Presentation() {
             <ListItem>
               <Link href="https://github.com/facebookincubator/create-react-app" target="_blank" textColor="#888">
                 Create React App
+              </Link>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Link href="https://presentations.travi.org/component-library/" target="_blank" textColor="#888">
+                Build an Interactive Component Library
               </Link>
             </ListItem>
           </Appear>
@@ -601,7 +837,7 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://github.com/travi/react-in-isolation/tree/dsmjs-oct-2017"
+                  href="https://github.com/travi/react-in-isolation/tree/icc-nov-2017"
                 >
                   github.com/travi/react-in-isolation
                 </Link>
@@ -610,9 +846,9 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://presentations.travi.org/react-in-isolation-dsmjs-oct-2017"
+                  href="https://icc-nov-2017--react-in-isolation-demo.netlify.com"
                 >
-                  presentations.travi.org/react-in-isolation-dsmjs-oct-2017
+                  icc-nov-2017--react-in-isolation-demo.netlify.com
                 </Link>
               </ListItem>
             </List>

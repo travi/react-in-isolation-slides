@@ -3,10 +3,11 @@ import React, {Component} from 'react';
 export default class Input extends Component {
   state = {value: ''};
 
-  changeHandler = (event, updatedValue) => {
-    this.setState({
-      value: updatedValue
-    });
+  changeHandler = event => {
+    const updatedValue = event.target.value;
+
+    this.setState({value: updatedValue});
+    this.props.onChange(event, updatedValue);
   };
 
   render() {
