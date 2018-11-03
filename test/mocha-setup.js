@@ -3,6 +3,10 @@ import quibble from 'quibble';
 import emmitter from 'component-emitter';
 import ease from 'ease-component';
 import type from 'component-type';
+import {configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({adapter: new Adapter()});
 
 const importAsString = module => {
   module.exports = '';    // eslint-disable-line no-param-reassign
@@ -20,9 +24,9 @@ quibble('emitter', emmitter);
 quibble('type', type);
 quibble('ease', ease);
 
-console.error = message => {   // eslint-disable-line no-console
-  if (!message.includes('CodeSlide')) throw new Error(message);
-};
+// console.error = message => {   // eslint-disable-line no-console
+//   if (!message.includes('CodeSlide')) throw new Error(message);
+// };
 
 const dom = new JSDOM('<!doctype html><html><body></body></html>', {url: 'http://localhost'});
 global.document = dom.window.document;

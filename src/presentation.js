@@ -31,19 +31,31 @@ export default function Presentation() {
         bgDarken={0.75}
         bgImage={require('../assets/react-in-isolation/react-logo.svg')}
       >
-        <Heading size={1} fit caps>Learn React</Heading>
-        <Heading size={2} fit caps>in Isolation</Heading>
+        <Heading size={1} fit caps>
+          Learn React
+        </Heading>
+        <Heading size={2} fit caps>
+          in Isolation
+        </Heading>
 
-        <Text textColor="#888" textSize="1em" margin="40px 0px 0px" bold>Matt Travi</Text>
+        <Text textColor="#888" textSize="1em" margin="40px 0px 0px" bold>
+          Matt Travi
+        </Text>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Less of an intro to React</Heading>
-        <Heading size={2} fit>Instead, how to learn React</Heading>
+        <Heading size={1} fit>
+          Less of an intro to React
+        </Heading>
+        <Heading size={2} fit>
+          Instead, how to learn React
+        </Heading>
       </Slide>
 
       <Slide>
-        <Heading size={2} fit>React, by itself, can be simple</Heading>
+        <Heading size={2} fit>
+          React, by itself, can be simple
+        </Heading>
       </Slide>
 
       <Slide>
@@ -53,20 +65,30 @@ export default function Presentation() {
       </Slide>
 
       <Slide notes="Transpilation, Bundling for the Browser, Auto rebuild when developing, Hot-reload">
-        <Heading size={2} fit>Build Tools</Heading>
+        <Heading size={2} fit>
+          Build Tools
+        </Heading>
       </Slide>
 
       <Slide notes="Loading data to the browser, State management, Routing, SSR">
-        <Heading size={2} fit>Application Wiring</Heading>
+        <Heading size={2} fit>
+          Application Wiring
+        </Heading>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>How can we isolate React</Heading>
-        <Heading size={2} fit>to learn it without the distractions?</Heading>
+        <Heading size={1} fit>
+          How can we isolate React
+        </Heading>
+        <Heading size={2} fit>
+          to learn it without the distractions?
+        </Heading>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1}>Hello World</Heading>
+        <Heading size={1}>
+          Hello World
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -105,7 +127,9 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Heading size={2} fit>Unit Tests</Heading>
+        <Heading size={2} fit>
+          Unit Tests
+        </Heading>
       </Slide>
 
       <Slide>
@@ -154,8 +178,12 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>But what do I do with these components</Heading>
-        <Heading size={2} fit>without an application?</Heading>
+        <Heading size={1} fit>
+          But what do I do with these components
+        </Heading>
+        <Heading size={2} fit>
+          without an application?
+        </Heading>
       </Slide>
 
       <Slide transition={['zoom']}>
@@ -165,31 +193,62 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="#888">
-        <Heading size={2} fit>Configuring Storybook</Heading>
+        <Heading size={2} fit>
+          Configuring Storybook
+        </Heading>
 
         <Terminal
           title="~/development/react-in-isolation @ Travi-MBP"
           output={[
-            <Typist cursor={cursor} key="storybook cli">npm i -g @storybook/cli</Typist>,
+            <Typist cursor={cursor} key="storybook cli">
+              npm i -g @storybook/cli
+            </Typist>,
             <div key="cli installation">
-              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
-              <div>+ @storybook/cli@3.2.12</div>
-              <div>added 379 packages in 93.821s</div>
-              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>
+                .
+              </div>
+              <div>
+                + @storybook/cli@3.2.12
+              </div>
+              <div>
+                added 379 packages in 93.821s
+              </div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>
+                .
+              </div>
             </div>,
-            <Typist cursor={cursor} key="storybook init">getstorybook</Typist>,
+            <Typist cursor={cursor} key="storybook init">
+              getstorybook
+            </Typist>,
             <div key="init results">
-              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>
+                .
+              </div>
               <div style={{backgroundColor: 'white', color: 'black'}}>
                 &nbsp;getstorybook - the simplest way to add a storybook to your project.
               </div>
-              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
-              <div>&nbsp;• Detecting project type. <span style={{color: '#00ff00'}}>✓</span></div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>
+                .
+              </div>
+              <div>
+                &nbsp;• Detecting project type.
+                <span style={{color: '#00ff00'}}>
+✓
+                </span>
+              </div>
               <div>
                 &nbsp;• Adding storybook support to your &quot;React&quot; app.
-                &nbsp;<span style={{color: '#00ff00'}}>✓</span>
+                &nbsp;
+                <span style={{color: '#00ff00'}}>
+✓
+                </span>
               </div>
-              <div>&nbsp;• Preparing to install dependencies. <span style={{color: '#00ff00'}}>✓</span></div>
+              <div>
+                &nbsp;• Preparing to install dependencies.
+                <span style={{color: '#00ff00'}}>
+✓
+                </span>
+              </div>
             </div>
           ]}
         />
@@ -208,15 +267,23 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Heading size={2} fit>Build Details Handled by Storybook</Heading>
+        <Heading size={2} fit>
+          Build Details Handled by Storybook
+        </Heading>
 
         <List>
-          <ListItem>Transpilation (Babel)</ListItem>
+          <ListItem>
+            Transpilation (Babel)
+          </ListItem>
           <ListItem>
             Bundling for the browser (Webpack)
             <List>
-              <ListItem>Dev Server</ListItem>
-              <ListItem>Hot Reload</ListItem>
+              <ListItem>
+                Dev Server
+              </ListItem>
+              <ListItem>
+                Hot Reload
+              </ListItem>
             </List>
           </ListItem>
         </List>
@@ -245,13 +312,17 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Functional" target="_blank">
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Functional" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Props</Heading>
+        <Heading size={1} fit>
+          Props
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -282,11 +353,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link
-          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Props%2FButton"
-          target="_blank"
-        >
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Props%2FButton" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
@@ -308,16 +378,17 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link
-          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
-          target="_blank"
-        >
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1}>Encapsulation</Heading>
+        <Heading size={1}>
+          Encapsulation
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -387,7 +458,9 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Heading size={2} fit>Unit Tests</Heading>
+        <Heading size={2} fit>
+          Unit Tests
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -433,32 +506,39 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link
-          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton"
-          target="_blank"
-        >
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Flux</Heading>
+        <Heading size={1} fit>
+          Flux
+        </Heading>
       </Slide>
 
       <Slide>
-        <Heading size={2} fit>Unidirectional Data Flow</Heading>
+        <Heading size={2} fit>
+          Unidirectional Data Flow
+        </Heading>
 
         <Image src={images.unidirectional.replace('/', '')} />
       </Slide>
 
       <Slide>
-        <Heading size={2} fit>User Action</Heading>
+        <Heading size={2} fit>
+          User Action
+        </Heading>
 
         <Image src={images.userAction.replace('/', '')} />
       </Slide>
 
       <Slide>
-        <Heading size={2} fit>Functional Component</Heading>
+        <Heading size={2} fit>
+          Functional Component
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -474,12 +554,26 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Heading size={2} fit>Container Component</Heading>
+        <Heading size={2} fit>
+          Container Component
+        </Heading>
 
         <List>
-          <Appear><ListItem>State</ListItem></Appear>
-          <Appear><ListItem>Lifecycle Hooks</ListItem></Appear>
-          <Appear><ListItem>Instance Methods</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              State
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Lifecycle Hooks
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Instance Methods
+            </ListItem>
+          </Appear>
         </List>
       </Slide>
 
@@ -496,16 +590,28 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>State</Heading>
+        <Heading size={1} fit>
+          State
+        </Heading>
 
         <List>
-          <Appear><ListItem>Application</ListItem></Appear>
-          <Appear><ListItem>Component</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Application
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Component
+            </ListItem>
+          </Appear>
         </List>
       </Slide>
 
       <Slide>
-        <Heading size={2} fit>Controlled Input</Heading>
+        <Heading size={2} fit>
+          Controlled Input
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -531,8 +637,10 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
@@ -549,7 +657,7 @@ export default function Presentation() {
             loc: [12, 21],
             title: 'Container Component',
             note: 'the `render` function serves the same purpose as a functional component, but has privileged ' +
-            'access to instance properties'
+              'access to instance properties'
           },
           {
             loc: [16, 17],
@@ -575,7 +683,9 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Heading size={2} fit>Unit Tests</Heading>
+        <Heading size={2} fit>
+          Unit Tests
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -621,13 +731,17 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
-          <Heading size={2}>Demo</Heading>
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Navigation</Heading>
+        <Heading size={1} fit>
+          Navigation
+        </Heading>
       </Slide>
 
       <CodeSlide
@@ -689,11 +803,12 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          // eslint-disable-next-line max-len
-          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2FlinkTo"
+          href="https://travi.github.io/react-in-isolation/?selectedKind=Navigation%2FPagination%2FlinkTo"
           target="_blank"
         >
-          <Heading size={2}>Demo</Heading>
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
@@ -746,16 +861,19 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          // eslint-disable-next-line max-len
-          href="https://icc-nov-2017--react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2Frouter"
+          href="https://travi.github.io/react-in-isolation/?selectedKind=Navigation%2FPagination%2Frouter"
           target="_blank"
         >
-          <Heading size={2}>Demo</Heading>
+          <Heading size={2}>
+            Demo
+          </Heading>
         </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Next Steps</Heading>
+        <Heading size={1} fit>
+          Next Steps
+        </Heading>
 
         <List>
           <Appear>
@@ -771,7 +889,7 @@ export default function Presentation() {
               <List>
                 <ListItem>
                   <Link
-                    href="https://github.com/storybooks/storybook/tree/icc-nov-2017/addons/knobs"
+                    href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
                     target="_blank"
                     textColor="#888"
                   >
@@ -816,7 +934,9 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Matt Travi</Heading>
+        <Heading size={1} fit>
+          Matt Travi
+        </Heading>
 
         <Layout>
           <Fit style={{paddingRight: 30}}>
@@ -828,10 +948,14 @@ export default function Presentation() {
           <Fill>
             <List>
               <ListItem>
-                <Link textColor="#888" target="_blank" href="https://matt.travi.org">matt.travi.org</Link>
+                <Link textColor="#888" target="_blank" href="https://matt.travi.org">
+                  matt.travi.org
+                </Link>
               </ListItem>
               <ListItem>
-                <Link textColor="#888" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
+                <Link textColor="#888" target="_blank" href="https://twitter.com/mtravi">
+                  twitter.com/mtravi
+                </Link>
               </ListItem>
               <ListItem>
                 <Link
@@ -846,9 +970,9 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://icc-nov-2017--react-in-isolation-demo.netlify.com"
+                  href="https://presentations.travi.org/react-in-isolation-icc-nov-2017"
                 >
-                  icc-nov-2017--react-in-isolation-demo.netlify.com
+                  presentations.travi.org/react-in-isolation-icc-nov-2017
                 </Link>
               </ListItem>
             </List>
