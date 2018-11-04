@@ -13,11 +13,10 @@
     "build": "webpack --env production",
     "build:dev": "webpack --env development",
     "start": "babel-node webpack-dev-server.js",
-    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -a -d lib/",
+    "predeploy": "run-s build",
+    "deploy": "netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=./lib --prod",
     "commitmsg": "commitlint -e",
-    "precommit": "npm test",
-    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
-    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
+    "precommit": "npm test"
   },
   "config": {
     "commitizen": {
@@ -53,7 +52,6 @@
     "file-loader": "2.0.0",
     "gh-pages": "2.0.1",
     "globstar": "1.0.0",
-    "greenkeeper-lockfile": "1.15.1",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.2",
     "img-loader": "3.0.1",
