@@ -1,1 +1,2 @@
 extends: '@travi/travi/rules/react'
+parser: babel-eslint
