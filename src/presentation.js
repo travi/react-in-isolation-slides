@@ -5,7 +5,6 @@ import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
 import CodeSlide from 'spectacle-code-slide';
 import 'normalize.css';
-import 'spectacle/lib/themes/default/index.css';
 import Typist from 'react-typist';
 
 const theme = createTheme({
@@ -22,6 +21,7 @@ const images = {
 preloader(images);
 
 const cursor = {show: false, blink: true, element: '|', hideWhenDone: false, hideWhenDoneDelay: 1000};
+const avatarSize = 250;
 
 export default function Presentation() {
   return (
@@ -941,8 +941,8 @@ export default function Presentation() {
         <Layout>
           <Fit style={{paddingRight: 30}}>
             <Image
-              style={{border: '10px solid #e5e5e5'}}
-              src="https://secure.gravatar.com/avatar/552ffda146c8a19730e4e9a27dafb749?size=250"
+              style={{border: '10px solid #e5e5e5', maxWidth: avatarSize}}
+              src={`https://secure.gravatar.com/avatar/552ffda146c8a19730e4e9a27dafb749?size=${avatarSize}`}
             />
           </Fit>
           <Fill>

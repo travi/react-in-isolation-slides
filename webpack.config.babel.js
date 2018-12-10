@@ -99,13 +99,13 @@ export default function (env) {
         minimize: true,
         debug: false
       })),
-      ifProduction(new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-          screw_ie8: true,
-          warnings: false
-        }
-      })),
+      // ifProduction(new webpack.optimize.UglifyJsPlugin({
+      //   sourceMap: true,
+      //   compress: {
+      //     screw_ie8: true,
+      //     warnings: false
+      //   }
+      // })),
       ifProduction(new Visualizer()),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'slides'],
