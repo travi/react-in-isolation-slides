@@ -1,19 +1,17 @@
 /* eslint import/no-extraneous-dependencies: ['error', {'devDependencies': true}] */
 import webpack from 'webpack';
 import {getIfUtils, removeEmpty} from 'webpack-config-utils';
-import AssetsPlugin from 'assets-webpack-plugin';
-import Visualizer from 'webpack-visualizer-plugin';
-import CleanPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
-export default function (env) {
+export default function (env = 'development') {
   const {ifDevelopment, ifProduction} = getIfUtils(env);
   const assetsPath = path.resolve(__dirname, './lib');
   const defaultChunks = ['vendor', 'manifest'];
 
   return {
-    devtool: ifDevelopment('eval-source-map', 'source-map'),
+    devtool: ifDevelopment('cheap-module-source-map', 'source-map'),
+
     entry: {
       slides: './src',
       vendor: removeEmpty([
@@ -28,6 +26,7 @@ export default function (env) {
       filename: ifProduction('[name]-[chunkhash].js', '[name].js'),
       publicPath: '/'
     },
+
     module: {
       rules: [
         {
@@ -82,37 +81,24 @@ export default function (env) {
       ]
     },
     plugins: removeEmpty([
-      ifProduction(new CleanPlugin([assetsPath], {root: __dirname})),
-      // ifDevelopment(new webpack.HotModuleReplacementPlugin()),
       ifDevelopment(new webpack.NamedModulesPlugin()),
       ifDevelopment(new webpack.NoEmitOnErrorsPlugin()),
-      new AssetsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(env)
         }
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-        names: defaultChunks
-      }),
-      ifProduction(new webpack.LoaderOptionsPlugin({
-        minimize: true,
-        debug: false
-      })),
-      // ifProduction(new webpack.optimize.UglifyJsPlugin({
-      //   sourceMap: true,
-      //   compress: {
-      //     screw_ie8: true,
-      //     warnings: false
-      //   }
-      // })),
-      ifProduction(new Visualizer()),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'slides'],
         filename: 'index.html',
         template: 'src/presentation.mustache',
         title: 'React in Isolation'
       })
-    ])
+    ]),
+
+    mode: env,
+    optimization: {
+      minimize: ifProduction(true, false)
+    }
   };
 }
