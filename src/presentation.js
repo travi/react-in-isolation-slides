@@ -19,6 +19,7 @@ const images = {
 preloader(images);
 
 const avatarSize = 250;
+const innerListStyle = {marginLeft: 60};
 
 export default function Presentation() {
   return (
@@ -204,7 +205,7 @@ export default function Presentation() {
           </ListItem>
           <ListItem>
             Bundling for the browser (Webpack)
-            <List>
+            <List style={innerListStyle}>
               <ListItem>
                 Dev Server
               </ListItem>
@@ -813,7 +814,7 @@ export default function Presentation() {
                 Storybook Plugins
               </Link>
 
-              <List>
+              <List style={innerListStyle}>
                 <ListItem>
                   <Link
                     href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
