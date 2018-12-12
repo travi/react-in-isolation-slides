@@ -564,14 +564,6 @@ export default function Presentation() {
         ]}
       />
 
-      <Slide>
-        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Inputs" target="_blank">
-          <Heading size={2}>
-            Demo
-          </Heading>
-        </Link>
-      </Slide>
-
       <CodeSlide
         lang="jsx"
         code={require('../assets/react-in-isolation/controlled-input.example')}
@@ -729,17 +721,6 @@ export default function Presentation() {
         ]}
       />
 
-      <Slide>
-        <Link
-          href="https://react-in-isolation-demo.travi.org/?selectedKind=Navigation%2FPagination%2FlinkTo"
-          target="_blank"
-        >
-          <Heading size={2}>
-            Demo
-          </Heading>
-        </Link>
-      </Slide>
-
       <CodeSlide
         lang="jsx"
         code={require('../assets/react-in-isolation/navigation.example')}
@@ -789,7 +770,7 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          href="https://react-in-isolation-demo.travi.org/?selectedKind=Navigation%2FPagination%2Frouter"
+          href="https://react-in-isolation-demo.travi.org/?selectedKind=Navigation%2FPagination%2FlinkTo"
           target="_blank"
         >
           <Heading size={2}>
@@ -846,7 +827,18 @@ export default function Presentation() {
           </Appear>
           <Appear>
             <ListItem>
-              <Link href="https://github.com/facebookincubator/create-react-app" target="_blank" textColor="#888">
+              <Link
+                href="https://medium.com/@mtiller/testing-react-components-using-storybook-and-cypress-1689a27f55aa"
+                target="_blank"
+                textColor="#888"
+              >
+                Cypress
+              </Link>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Link href="https://facebook.github.io/create-react-app/" target="_blank" textColor="#888">
                 Create React App
               </Link>
             </ListItem>
