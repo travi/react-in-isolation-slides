@@ -2,10 +2,8 @@ import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
 import {Appear, Deck, Fill, Fit, Heading, Image, Layout, Link, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
-import Terminal from 'spectacle-terminal';
 import CodeSlide from 'spectacle-code-slide';
 import 'normalize.css';
-import Typist from 'react-typist';
 
 const theme = createTheme({
   primary: '#333',
@@ -20,7 +18,6 @@ const images = {
 };
 preloader(images);
 
-const cursor = {show: false, blink: true, element: '|', hideWhenDone: false, hideWhenDoneDelay: 1000};
 const avatarSize = 250;
 
 export default function Presentation() {
@@ -191,80 +188,6 @@ export default function Presentation() {
           <Image width="80%" src={require('../assets/react-in-isolation/storybook.svg')} />
         </Link>
       </Slide>
-
-      <Slide bgColor="#888">
-        <Heading size={2} fit>
-          Configuring Storybook
-        </Heading>
-
-        <Terminal
-          title="~/development/react-in-isolation @ Travi-MBP"
-          output={[
-            <Typist cursor={cursor} key="storybook cli">
-              npm i -g @storybook/cli
-            </Typist>,
-            <div key="cli installation">
-              <div style={{color: 'rgb(48, 53, 57)'}}>
-                .
-              </div>
-              <div>
-                + @storybook/cli@3.2.12
-              </div>
-              <div>
-                added 379 packages in 93.821s
-              </div>
-              <div style={{color: 'rgb(48, 53, 57)'}}>
-                .
-              </div>
-            </div>,
-            <Typist cursor={cursor} key="storybook init">
-              getstorybook
-            </Typist>,
-            <div key="init results">
-              <div style={{color: 'rgb(48, 53, 57)'}}>
-                .
-              </div>
-              <div style={{backgroundColor: 'white', color: 'black'}}>
-                &nbsp;getstorybook - the simplest way to add a storybook to your project.
-              </div>
-              <div style={{color: 'rgb(48, 53, 57)'}}>
-                .
-              </div>
-              <div>
-                &nbsp;• Detecting project type.
-                <span style={{color: '#00ff00'}}>
-✓
-                </span>
-              </div>
-              <div>
-                &nbsp;• Adding storybook support to your &quot;React&quot; app.
-                &nbsp;
-                <span style={{color: '#00ff00'}}>
-✓
-                </span>
-              </div>
-              <div>
-                &nbsp;• Preparing to install dependencies.
-                <span style={{color: '#00ff00'}}>
-✓
-                </span>
-              </div>
-            </div>
-          ]}
-        />
-      </Slide>
-
-      <CodeSlide
-        lang="json"
-        code={require('../assets/package.npm.example')}
-        ranges={[
-          {
-            loc: [14, 16],
-            title: 'Storybook',
-            note: 'scripts to run and build are added'
-          }
-        ]}
-      />
 
       <Slide>
         <Heading size={2} fit>
