@@ -312,7 +312,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Functional" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Functional" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -353,7 +353,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Props%2FButton" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Props%2FButton" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -378,7 +378,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -506,7 +506,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -637,7 +637,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -731,7 +731,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="react-in-isolation-demo.netlify.com/?selectedKind=Inputs" target="_blank">
+        <Link href="https://react-in-isolation-demo.travi.org/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>
             Demo
           </Heading>
@@ -803,7 +803,7 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          href="react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2FlinkTo"
+          href="https://react-in-isolation-demo.travi.org/?selectedKind=Navigation%2FPagination%2FlinkTo"
           target="_blank"
         >
           <Heading size={2}>
@@ -861,7 +861,7 @@ export default function Presentation() {
 
       <Slide>
         <Link
-          href="react-in-isolation-demo.netlify.com/?selectedKind=Navigation%2FPagination%2Frouter"
+          href="https://react-in-isolation-demo.travi.org/?selectedKind=Navigation%2FPagination%2Frouter"
           target="_blank"
         >
           <Heading size={2}>
@@ -970,9 +970,9 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://react-in-isolation.netlify.com"
+                  href="https://react-in-isolation.travi.org"
                 >
-                  react-in-isolation.netlify.com
+                  react-in-isolation.travi.org
                 </Link>
               </ListItem>
             </List>
