@@ -134,9 +134,11 @@ export default function Presentation() {
           <Fill>
             <Image width="70%" src={require('../assets/react-in-isolation/airbnb.svg')} />
             <Appear>
-              <Link href="https://mochajs.org/" target="_blank">
-                <Image width="70%" src={require('../assets/react-in-isolation/mocha.svg')} />
-              </Link>
+              <div>
+                <Link href="https://mochajs.org/" target="_blank">
+                  <Image width="70%" src={require('../assets/react-in-isolation/mocha.svg')} />
+                </Link>
+              </div>
             </Appear>
           </Fill>
           <Fill>
@@ -144,9 +146,11 @@ export default function Presentation() {
               <Image width="70%" src={images.enzyme.replace('/', '')} />
             </Link>
             <Appear>
-              <Link href="http://chaijs.com/" target="_blank">
-                <Image width="60%" src={require('../assets/react-in-isolation/chai.svg')} />
-              </Link>
+              <div>
+                <Link href="http://chaijs.com/" target="_blank">
+                  <Image width="60%" src={require('../assets/react-in-isolation/chai.svg')} />
+                </Link>
+              </div>
             </Appear>
           </Fill>
         </Layout>
