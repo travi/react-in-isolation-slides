@@ -1,6 +1,7 @@
 {
   "name": "presentations",
   "license": "MIT",
+  "private": true,
   "author": "Matt Travi",
   "repository": "travi/presentations",
   "bugs": "https://github.com/travi/presentations/issues",
